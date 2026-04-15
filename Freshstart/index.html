@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshStart Cleaning Co. | Professional Cleaning Services | Chicago & South Suburbs</title>
+    <meta name="description" content="FreshStart Cleaning Co. provides professional Airbnb turnover, deep cleaning, move-in/move-out, and office cleaning services in Chicago and the South Suburbs.">
+    <style>
+        /* ============ RESET & BASE ============ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* ============ CSS VARIABLES ============ */
+        :root {
+            --primary: #0a5eb8;
+            --primary-dark: #083d78;
+            --primary-light: #e8f1fb;
+            --accent: #00a8e8;
+            --white: #ffffff;
+            --off-white: #f7f9fc;
+            --dark: #1a1a2e;
+            --gray: #6b7280;
+            --light-gray: #e5e7eb;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        /* ============ UTILITY ============ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-top: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(10, 94, 184, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-accent:hover {
+            background: #008bbf;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 168, 232, 0.3);
+        }
+
+        /* ============ HEADER / NAV ============ */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+        }
+
+        .top-bar {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .top-bar a:hover {
+            color: var(--accent);
+        }
+
+        .top-bar-left, .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        nav {
+            padding: 15px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ============ LOGO ============ */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+
+        .logo-icon svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            font-size: 0.7rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        /* ============ NAV LINKS ============ */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--dark);
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            margin-left: 10px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--dark);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 50%, #e0f2fe 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,168,232,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(10,94,184,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero-content h2 .highlight {
+            color: var(--primary);
+            position: relative;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .stat h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .stat p {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 0;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .hero-card-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-card-icon svg {
+            width: 60px;
+            height: 60px;
+        }
+
+        .hero-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .hero-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .hero-card-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--accent);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,168,232,0.3);
+        }
+
+        .floating-badge {
+            position: absolute;
+            background: var(--white);
+            border-radius: 15px;
+            padding: 12px 18px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-badge.badge-1 {
+            bottom: 30px;
+            left: -30px;
+            color: #10b981;
+        }
+
+        .floating-badge.badge-2 {
+            top: 30px;
+            left: -20px;
+            color: var(--primary);
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ============ SERVICES ============ */
+        .services {
+            background: var(--off-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            background: var(--primary-light);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary);
+        }
+
+        .service-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: var(--primary);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon svg {
+            fill: var(--white);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .service-price {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .service-details {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .service-details li {
+            padding: 4px 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-details li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ============ PRICING TABLE ============ */
+        .pricing {
+            background: var(--white);
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+
+        .pricing-table thead {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .pricing-table th {
+            padding: 18px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .pricing-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        .pricing-table tbody tr {
+            transition: var(--transition);
+        }
+
+        .pricing-table tbody tr:hover {
+            background: var(--primary-light);
+        }
+
+        .pricing-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-note {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* ============ WHY CHOOSE US ============ */
+        .why-us {
+            background: var(--off-white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-card-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 15px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .why-card-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .why-card h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .why-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* ============ TESTIMONIALS ============ */
+        .testimonials {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+        }
+
+        .testimonials .section-title h2 {
+            color: var(--white);
+        }
+
+        .testimonials .section-title h2::after {
+            background: var(--accent);
+        }
+
+        .testimonials .section-title p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-3px);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .author-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .author-info span {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* ============ PROCESS ============ */
+        .process {
+            background: var(--white);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 12%;
+            right: 12%;
+            height: 3px;
+            background: var(--light-gray);
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 15px;
+            border: 5px solid var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .process-step h3 {
+            font-size: 1.05rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        /* ============ BOOKING / QUOTE FORM ============ */
+        .booking {
+            background: var(--off-white);
+        }
+
+        .booking-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .booking-info {
+            padding: 20px 0;
+        }
+
+        .booking-info h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .booking-info > p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-method-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-method-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-method h4 {
+            font-size: 0.95rem;
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+
+        .contact-method p, .contact-method a {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .booking-form {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .booking-form h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--light-gray);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: var(--off-white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(10,94,184,0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.05rem;
+            margin-top: 5px;
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 12px;
+        }
+
+        /* ============ SERVICE AREAS ============ */
+        .areas {
+            background: var(--white);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .area-tag {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .area-tag:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        /* ============ CTA BANNER ============ */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            padding: 60px 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-banner p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .cta-banner .btn {
+            background: var(--white);
+            color: var(--primary);
+            font-size: 1.05rem;
+            padding: 16px 40px;
+        }
+
+        .cta-banner .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo-text h1 {
+            color: var(--white);
+        }
+
+        .footer-brand > p {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.6);
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* ============ MODAL ============ */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            animation: modalIn 0.3s ease;
+        }
+
+        @keyframes modalIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            background: none;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--dark);
+        }
+
+        .modal h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .modal p {
+            color: var(--gray);
+        }
+
+        .modal .checkmark {
+            width: 70px;
+            height: 70px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* ============ BACK TO TOP ============ */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                max-width: 100%;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .booking-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                display: none;
+            }
+
+            header {
+                padding-top: 0;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-lg);
+                gap: 15px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 130px 0 60px;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+            .section-title h2 {
+                font-size: 1.7rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-table {
+                font-size: 0.85rem;
+            }
+
+            .pricing-table th,
+            .pricing-table td {
+                padding: 12px 10px;
+            }
+
+            .booking-form {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 1.7rem;
+            }
+
+            .areas-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ TOP BAR ============ -->
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-left">
+                    <div class="top-bar-item">
+                        <span>📍</span>
+                        <span>Serving Chicago &amp; South Suburbs</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-item">
+                        <span>📞</span>
+                        <a href="tel:8035634277">(803) 563-4277</a>
+                    </div>
+                    <div class="top-bar-item">
+                        <span>⏰</span>
+                        <span>Mon–Sun: 7AM – 9PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ NAV ============ -->
+        <nav>
+            <div class="container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 5 L52 15 L52 32 C52 45 42 54 30 58 C18 54 8 45 8 32 L8 15 Z" fill="#0a5eb8" opacity="0.9"/>
+                            <path d="M30 8 L49 17 L49 32 C49 43 40 51 30 55 C20 51 11 43 11 32 L11 17 Z" fill="#e8f1fb"/>
+                            <path d="M30 18 L32.5 25 L40 25 L34 30 L36 37 L30 33 L24 37 L26 30 L20 25 L27.5 25 Z" fill="#00a8e8"/>
+                            <line x1="22" y1="40" x2="25" y2="44" stroke="#0a5eb8" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="30" y1="39" x2="30" y2="44" stroke="#0a5eb8" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="38" y1="40" x2="35" y2="44" stroke="#0a5eb8" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="17" cy="12" r="1.5" fill="#00a8e8"/>
+                            <circle cx="43" cy="10" r="1" fill="#00a8e8"/>
+                            <circle cx="47" cy="22" r="1.5" fill="#0a5eb8" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>FreshStart</h1>
+                        <span>Cleaning Co.</span>
+                    </div>
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="#services">Services</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#areas">Areas</a>
+                    <a href="#booking" class="btn btn-primary nav-cta">Get a Quote</a>
+                </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    Premium Cleaning for<br>
+                    <span class="highlight">Chicago's Best Properties</span>
+                </h2>
+                <p>
+                    Trusted by Airbnb hosts, property managers, and homeowners across Chicago and the South Suburbs. We deliver spotless results every single time.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn btn-primary">Request a Free Quote</a>
+                    <a href="tel:8035634277" class="btn btn-secondary">📞 Call Now</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Properties Cleaned</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5.0</h3>
+                        <p>★ Average Rating</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24hr</h3>
+                        <p>Turnaround Available</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-badge">Book Today!</div>
+                    <div class="floating-badge badge-1">
+                        <span>✓</span> 100% Satisfaction
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <span>★</span> Top Rated
+                    </div>
+                    <div class="hero-card-icon">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="28" fill="none" stroke="#0a5eb8" stroke-width="2" opacity="0.3"/>
+                            <path d="M20 42 L28 20 L36 42" fill="none" stroke="#0a5eb8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="36" y1="20" x2="36" y2="42" stroke="#00a8e8" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="36" y1="42" x2="46" y2="42" stroke="#00a8e8" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="22" cy="16" r="2" fill="#00a8e8"/>
+                            <circle cx="44" cy="16" r="1.5" fill="#0a5eb8" opacity="0.5"/>
+                            <circle cx="46" cy="28" r="1.5" fill="#00a8e8" opacity="0.5"/>
+                            <path d="M18 44 C18 44 14 46 16 48 C18 50 22 48 22 46" stroke="#0a5eb8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Sparkling Clean Guaranteed</h3>
+                    <p>Airbnb turnovers, deep cleans, move-in/out — we handle it all with care and precision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Professional cleaning solutions tailored for every property type and need</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 3 L15 3 C15 3 8 10 8 16 C8 20 11 24 15 24 C19 24 22 20 22 16 C22 10 15 3 15 3Z"/>
+                            <line x1="15" y1="27" x2="15" y2="24" stroke="#0a5eb8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Airbnb / Short-Term Rental Turnover</h3>
+                    <p>Fast, thorough cleaning between guests. We ensure your property is guest-ready with fresh linens, restocked supplies, and a spotless space.</p>
+                    <div class="service-price">From $120 – $250</div>
+                    <ul class="service-details">
+                        <li>Full kitchen &amp; bathroom sanitization</li>
+                        <li>Linen change &amp; bed making</li>
+                        <li>Trash removal &amp; restocking</li>
+                        <li>Floor mopping &amp; vacuuming</li>
+                        <li>Checklist photo documentation</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="8" width="18" height="16" rx="3" fill="currentColor"/>
+                            <circle cx="15" cy="5" r="3"/>
+                            <line x1="10" y1="14" x2="20" y2="14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="10" y1="18" x2="20" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Deep Cleaning</h3>
+                    <p>An intensive, top-to-bottom cleaning that reaches every corner. Perfect for seasonal refreshes or first-time clients wanting a fresh start.</p>
+                    <div class="service-price">From $200 – $450+</div>
+                    <ul class="service-details">
+                        <li>Inside appliance cleaning</li>
+                        <li>Baseboard &amp; trim scrubbing</li>
+                        <li>Grout &amp; tile deep clean</li>
+                        <li>Light fixture &amp; fan dusting</li>
+                        <li>Window sill &amp; track cleaning</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 14 L15 4 L25 14 L25 26 L5 26 Z"/>
+                            <rect x="12" y="18" width="6" height="8" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3>Standard House Cleaning</h3>
+                    <p>Regular maintenance cleaning to keep your home looking and feeling great. Perfect for weekly, bi-weekly, or monthly service.</p>
+                    <div class="service-price">From $100 – $200</div>
+                    <ul class="service-details">
+                        <li>Dusting all surfaces</li>
+                        <li>Bathroom &amp; kitchen cleaning</li>
+                        <li>Vacuuming &amp; mopping</li>
+                        <li>Trash removal</li>
+                        <li>General tidying</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="8" width="16" height="14" rx="2"/>
+                            <path d="M20 12 L26 12 L28 16 L28 22 L20 22 Z" fill="currentColor"/>
+                            <circle cx="10" cy="24" r="3" fill="currentColor"/>
+                            <circle cx="24" cy="24" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Move-In / Move-Out Cleaning</h3>
+                    <p>Get your full deposit back or welcome new tenants to a pristine space. We leave no corner untouched.</p>
+                    <div class="service-price">From $200 – $500+</div>
+                    <ul class="service-details">
+                        <li>Inside all cabinets &amp; closets</li>
+                        <li>Appliance interior cleaning</li>
+                        <li>Wall spot cleaning</li>
+                        <li>Complete floor treatment</li>
+                        <li>Garage/patio sweep (on request)</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="6" width="22" height="18" rx="2"/>
+                            <rect x="8" y="10" width="6" height="4" rx="1" fill="white"/>
+                            <rect x="16" y="10" width="6" height="4" rx="1" fill="white"/>
+                            <rect x="8" y="16" width="6" height="4" rx="1" fill="white"/>
+                            <rect x="16" y="16" width="6" height="4" rx="1" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3>Office Cleaning</h3>
+                    <p>A clean workspace boosts productivity. We provide reliable commercial cleaning for offices, co-working spaces, and small businesses.</p>
+                    <div class="service-price">From $150 – $400</div>
+                    <ul class="service-details">
+                        <li>Desk &amp; workstation sanitizing</li>
+                        <li>Restroom deep clean</li>
+                        <li>Break room cleaning</li>
+                        <li>Floor care &amp; vacuuming</li>
+                        <li>Trash &amp; recycling removal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Transparent Pricing</h2>
+                <p>Honest, competitive rates based on Chicago-area market standards. No hidden fees — ever.</p>
+            </div>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>1 Bed / 1 Bath</th>
+                        <th>2 Bed / 2 Bath</th>
+                        <th>3+ Bed / 2+ Bath</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Airbnb Turnover</strong></td>
+                        <td>$120 – $150</td>
+                        <td>$150 – $200</td>
+                        <td>$200 – $250+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Standard Cleaning</strong></td>
+                        <td>$100 – $130</td>
+                        <td>$130 – $170</td>
+                        <td>$170 – $200+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deep Cleaning</strong></td>
+                        <td>$200 – $280</td>
+                        <td>$280 – $380</td>
+                        <td>$380 – $450+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Move-In / Move-Out</strong></td>
+                        <td>$200 – $300</td>
+                        <td>$300 – $400</td>
+                        <td>$400 – $500+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Office Cleaning</strong></td>
+                        <td colspan="3" style="text-align:center;">Starting at $150 — priced by square footage &amp; frequency</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="price-note">
+                * Prices are estimates based on Chicago-area averages. Final pricing depends on property size, condition, and specific requirements.
+                <a href="#booking" style="color: var(--primary); font-weight: 600;">Request a custom quote →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="why-us section" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose FreshStart?</h2>
+                <p>We're not just cleaners — we're partners in keeping your property at its best</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="#0a5eb8" stroke-width="2"/>
+                            <path d="M10 16 L14 20 L22 12" stroke="#00a8e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>100% Satisfaction Guarantee</h3>
+                    <p>Not happy? We'll re-clean at no extra charge within 24 hours.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="#0a5eb8" stroke-width="2"/>
+                            <path d="M16 8 L16 16 L22 16" stroke="#00a8e8" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Fast Turnarounds</h3>
+                    <p>Same-day and next-day availability for urgent Airbnb turnovers.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 4 L20 12 L28 13 L22 19 L23.5 27 L16 23 L8.5 27 L10 19 L4 13 L12 12 Z" stroke="#0a5eb8" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Trusted &amp; Vetted</h3>
+                    <p>Background-checked, insured, and professionally trained cleaners.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="8" width="24" height="16" rx="3" stroke="#0a5eb8" stroke-width="2"/>
+                            <line x1="4" y1="14" x2="28" y2="14" stroke="#00a8e8" stroke-width="2"/>
+                            <line x1="8" y1="19" x2="16" y2="19" stroke="#00a8e8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>No Hidden Fees</h3>
+                    <p>Transparent pricing upfront. You'll know exactly what you're paying.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 26 L6 12 L16 4 L26 12 L26 26 Z" stroke="#0a5eb8" stroke-width="2"/>
+                            <rect x="13" y="18" width="6" height="8" stroke="#00a8e8" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Airbnb Specialists</h3>
+                    <p>We understand what hosts need — checklist cleaning, photo-ready results.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 4 C9 4 4 9 4 16 C4 23 9 28 16 28 C23 28 28 23 28 16" stroke="#0a5eb8" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 4 C20 4 28 8 28 16" stroke="#00a8e8" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="16" cy="16" r="3" fill="#0a5eb8"/>
+                        </svg>
+                    </div>
+                    <h3>Eco-Friendly Options</h3>
+                    <p>Green cleaning products available upon request — safe for kids &amp; pets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Real feedback from real Chicago homeowners, hosts, and property managers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"FreshStart has been a game-changer for my Airbnb business. They turn my unit around in under 2 hours and it looks absolutely perfect every time. My guest ratings went from 4.5 to 4.9 stars!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Marcus R.</h4>
+                            <span>Airbnb Host — Hyde Park</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"I manage 12 rental units in the south suburbs and FreshStart handles all my move-out cleanings. They're always on time, thorough, and fairly priced. Can't recommend them enough."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TJ</div>
+                        <div class="author-info">
+                            <h4>Tamika J.</h4>
+                            <span>Property Manager — Homewood</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"They deep cleaned my 3-bedroom house and I couldn't believe the difference. Baseboards, inside the oven, behind the fridge — they got EVERYTHING. Worth every penny."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DW</div>
+                        <div class="author-info">
+                            <h4>David W.</h4>
+                            <span>Homeowner — Lansing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="process section">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Getting started is simple — just 4 easy steps</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Request a Quote</h3>
+                    <p>Fill out our form or give us a call with your property details.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Get Your Price</h3>
+                    <p>We'll send a clear, detailed quote — usually within 1 hour.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>We Clean</h3>
+                    <p>Our team arrives on schedule and cleans to our premium standards.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>You Relax</h3>
+                    <p>Walk into a spotless space. Guaranteed satisfaction every time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BOOKING / QUOTE FORM ============ -->
+    <section class="booking section" id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get Your Free Quote</h2>
+                <p>Tell us about your property and we'll get back to you fast — usually within the hour</p>
+            </div>
+            <div class="booking-wrapper">
+                <div class="booking-info">
+                    <h3>Let's Get Your Space Sparkling ✨</h3>
+                    <p>Whether you need a one-time deep clean or regular Airbnb turnovers, we're ready to help. Reach out anytime — we'd love to hear from you.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92V19.92C22 20.48 21.56 20.93 21 20.97C20.68 21 20.35 21 20 21C10.61 21 3 13.39 3 4C3 3.65 3 3.32 3.03 3C3.07 2.44 3.52 2 4.08 2H7.08C7.56 2 7.97 2.34 8.05 2.82C8.14 3.38 8.3 3.93 8.52 4.45L6.91 6.06C8.19 8.88 10.49 11.18 13.31 12.46L14.92 10.85C15.44 11.07 15.99 11.23 16.55 11.32C17.03 11.4 17.37 11.81 17.37 12.29" stroke="#0a5eb8" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Call or Text</h4>
+                                <a href="tel:8035634277">(803) 563-4277</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="4" width="20" height="16" rx="3" stroke="#0a5eb8" stroke-width="2"/>
+                                    <path d="M2 7 L12 13 L22 7" stroke="#0a5eb8" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@freshstartchicago.com">info@freshstartchicago.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="10" r="3" stroke="#0a5eb8" stroke-width="2"/>
+                                    <path d="M12 2C7.58 2 4 5.58 4 10C4 15.54 12 22 12 22C12 22 20 15.54 20 10C20 5.58 16.42 2 12 2Z" stroke="#0a5eb8" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Service Area</h4>
+                                <p>Chicago &amp; South Suburbs, IL</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#0a5eb8" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="#0a5eb8" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Mon – Sun: 7:00 AM – 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM WITH FORMSPREE CONNECTED -->
+                <form class="booking-form" id="quoteForm" action="https://formspree.io/f/myklklep" method="POST">
+                    <h3>📋 Request a Quote</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(312) 555-1234">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed *</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service...</option>
+                            <option value="Airbnb / Short-Term Rental Turnover">Airbnb / Short-Term Rental Turnover</option>
+                            <option value="Deep Cleaning">Deep Cleaning</option>
+                            <option value="Standard House Cleaning">Standard House Cleaning</option>
+                            <option value="Move-In / Move-Out Cleaning">Move-In / Move-Out Cleaning</option>
+                            <option value="Office Cleaning">Office Cleaning</option>
+                            <option value="Other / Custom Request">Other / Custom Request</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bedrooms">Bedrooms</label>
+                            <select id="bedrooms" name="bedrooms">
+                                <option value="" disabled selected>Select...</option>
+                                <option value="Studio">Studio</option>
+                                <option value="1 Bedroom">1</option>
+                                <option value="2 Bedrooms">2</option>
+                                <option value="3 Bedrooms">3</option>
+                                <option value="4 Bedrooms">4</option>
+                                <option value="5+ Bedrooms">5+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bathrooms">Bathrooms</label>
+                            <select id="bathrooms" name="bathrooms">
+                                <option value="" disabled selected>Select...</option>
+                                <option value="1 Bathroom">1</option>
+                                <option value="2 Bathrooms">2</option>
+                                <option value="3 Bathrooms">3</option>
+                                <option value="4+ Bathrooms">4+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency</label>
+                        <select id="frequency" name="frequency">
+                            <option value="" disabled selected>Select...</option>
+                            <option value="One-Time">One-Time</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Bi-Weekly">Bi-Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="Per Turnover (Airbnb)">Per Turnover (Airbnb)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferredDate">Preferred Date</label>
+                        <input type="date" id="preferredDate" name="preferredDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Property Address</label>
+                        <input type="text" id="address" name="address" placeholder="123 Main St, Chicago, IL 60601">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your space, any special requests, pet info, access instructions, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">Get My Free Quote →</button>
+                    <p class="form-note">We respond within 1 hour during business hours. Your info is 100% private.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICE AREAS ============ -->
+    <section class="areas section" id="areas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Areas We Serve</h2>
+                <p>Proudly cleaning homes and businesses across Chicago and the South Suburbs</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-tag">Chicago Loop</div>
+                <div class="area-tag">South Loop</div>
+                <div class="area-tag">Hyde Park</div>
+                <div class="area-tag">Bronzeville</div>
+                <div class="area-tag">Chatham</div>
+                <div class="area-tag">Beverly</div>
+                <div class="area-tag">Pullman</div>
+                <div class="area-tag">Roseland</div>
+                <div class="area-tag">Dolton</div>
+                <div class="area-tag">Harvey</div>
+                <div class="area-tag">Homewood</div>
+                <div class="area-tag">Lansing</div>
+                <div class="area-tag">Calumet City</div>
+                <div class="area-tag">Matteson</div>
+                <div class="area-tag">Olympia Fields</div>
+                <div class="area-tag">Flossmoor</div>
+                <div class="area-tag">Country Club Hills</div>
+                <div class="area-tag">Tinley Park</div>
+                <div class="area-tag">Orland Park</div>
+                <div class="area-tag">Oak Lawn</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA BANNER ============ -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready for a Spotless Space?</h2>
+            <p>Book today and get 10% off your first cleaning!</p>
+            <a href="#booking" class="btn">Get My Free Quote</a>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-text">
+                            <h1>FreshStart</h1>
+                            <span>Cleaning Co.</span>
+                        </div>
+                    </div>
+                    <p>Professional cleaning services for Airbnb hosts, homeowners, property managers, and businesses across Chicago and the South Suburbs. Licensed, insured, and dedicated to excellence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Airbnb Turnover</a></li>
+                        <li><a href="#services">Deep Cleaning</a></li>
+                        <li><a href="#services">Standard Cleaning</a></li>
+                        <li><a href="#services">Move-In/Out</a></li>
+                        <li><a href="#services">Office Cleaning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#booking">Get a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:8035634277">📞 (803) 563-4277</a></li>
+                        <li><a href="mailto:info@freshstartchicago.com">📧 info@freshstartchicago.com</a></li>
+                        <li>📍 Chicago &amp; South Suburbs, IL</li>
+                        <li>⏰ Mon–Sun: 7AM – 9PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> FreshStart Cleaning Co. All rights reserved. | Chicago &amp; South Suburbs, IL</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ SUCCESS MODAL ============ -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="checkmark">✓</div>
+            <h3>Quote Request Sent!</h3>
+            <p>Thanks for reaching out! We'll get back to you within 1 hour during business hours. We can't wait to make your space sparkle! ✨</p>
+        </div>
+    </div>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- ============ JAVASCRIPT ============ -->
+    <script>
+        // ========== CURRENT YEAR ==========
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // ========== MOBILE NAV TOGGLE ==========
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ========== HEADER SCROLL EFFECT ==========
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // ========== BACK TO TOP ==========
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ========== FORM SUBMISSION WITH FORMSPREE ==========
+        const quoteForm = document.getElementById('quoteForm');
+        const successModal = document.getElementById('successModal');
+        const modalClose = document.getElementById('modalClose');
+
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(quoteForm);
+            const submitBtn = quoteForm.querySelector('.form-submit');
+
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+
+            // Send to Formspree
+            fetch('https://formspree.io/f/myklklep', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    successModal.classList.add('active');
+                    quoteForm.reset();
+                } else {
+                    alert('Oops! Something went wrong. Please call us at (803) 563-4277 instead.');
+                }
+            })
+            .catch(error => {
+                alert('Oops! Something went wrong. Please call us at (803) 563-4277 instead.');
+            })
+            .finally(() => {
+                submitBtn.textContent = 'Get My Free Quote →';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            successModal.classList.remove('active');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.remove('active');
+            }
+        });
+
+        // ========== PHONE NUMBER FORMATTING ==========
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = '(' + value.substring(0, 3) + ') ' + value.substring(3, 6) + '-' + value.substring(6, 10);
+            } else if (value.length >= 3) {
+                value = '(' + value.substring(0, 3) + ') ' + value.substring(3);
+            }
+            e.target.value = value;
+        });
+
+        // ========== SET MINIMUM DATE TO TODAY ==========
+        const dateInput = document.getElementById('preferredDate');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
+        // ========== SMOOTH SCROLL FOR ALL ANCHOR LINKS ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = header.offsetHeight + 10;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ========== INTERSECTION OBSERVER FOR ANIMATIONS ==========
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .why-card, .testimonial-card, .process-step, .contact-method').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
